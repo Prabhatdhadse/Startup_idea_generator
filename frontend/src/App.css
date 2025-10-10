@@ -108,12 +108,20 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start; /* left-align text for readability */
+  max-height: 400px;       /* fixed height to prevent overflow */
+  overflow-y: auto;        /* vertical scroll if content exceeds */
+  word-wrap: break-word;   /* break long words if needed */
+  line-height: 1.5;        /* improve readability */
+  padding-right: 10px;     /* space for scrollbar */
 }
+
 
 .app-container.dark .idea-card {
   background: #1e1e1e;
   color: #f0f0f0;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .footer {
