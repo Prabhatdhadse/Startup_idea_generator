@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
     setIdea("");
     try {
-      const res = await axios.post("http://startup-idea-generator.onrender.com/generate", { keyword });
+      const res = await axios.post("https://startup-idea-generator.onrender.com/generate", { keyword });
       if (res.data && res.data.idea) {
         setIdea(res.data.idea);
       } else {
@@ -37,7 +37,7 @@ function App() {
     try {
       const ideas = [];
       for (let i = 0; i < n; i++) {
-        const res = await axios.post("http://startup-idea-generator.onrender.com/generate", { keyword });
+        const res = await axios.post("https://startup-idea-generator.onrender.com/generate", { keyword });
         ideas.push(res.data.idea);
       }
       setIdea(ideas.map((it, idx) => `${idx + 1}. ${it}`).join("\n\n"));
