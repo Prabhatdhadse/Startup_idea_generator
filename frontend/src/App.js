@@ -37,7 +37,7 @@ function App() {
     try {
       const ideas = [];
       for (let i = 0; i < n; i++) {
-        const res = await axios.post("http://127.0.0.1:8000/generate", { keyword });
+        const res = await axios.post("http://startup-idea-generator.onrender.com/generate", { keyword });
         ideas.push(res.data.idea);
       }
       setIdea(ideas.map((it, idx) => `${idx + 1}. ${it}`).join("\n\n"));
@@ -87,7 +87,7 @@ function App() {
       )}
 
       <footer className="footer">
-        Backend: <code>http://127.0.0.1:8000</code>
+        Backend: <code>https://startup-idea-generator.onrender.com</code>
       </footer>
     </div>
   );
