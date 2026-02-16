@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
     setIdea("");
     try {
-      const res = await axios.post("http://127.0.0.1:8000/generate", { keyword });
+      const res = await axios.post("http://startup-idea-generator.onrender.com/generate", { keyword });
       if (res.data && res.data.idea) {
         setIdea(res.data.idea);
       } else {
